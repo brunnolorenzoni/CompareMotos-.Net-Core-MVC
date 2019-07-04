@@ -24,8 +24,8 @@ namespace CompareMotos.Models
         [DisplayName("Altura")]
         public double Height { get; set; }
 
-        [Required(ErrorMessage = "Adicione o altura da moto")]
-        [DisplayName("Altura")]
+        [Required(ErrorMessage = "Adicione o peso da moto")]
+        [DisplayName("Peso")]
         public double Weight { get; set; }
 
     }

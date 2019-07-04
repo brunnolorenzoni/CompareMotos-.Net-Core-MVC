@@ -46,6 +46,9 @@ namespace CompareMotos.Models
 
         public int TransmissionId { get; set; }
         public Transmission Transmission { get; set;}
-        
+
+        public int DimensionsId { get; set; }
+        public Dimensions Dimensions { get; set; }
+
     }
 }

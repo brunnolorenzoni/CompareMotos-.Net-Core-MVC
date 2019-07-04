@@ -13,17 +13,17 @@ namespace CompareMotos.Models
         [Key]
         public int ElectricId { get; set; }
 
-        [Required(ErrorMessage = "Adicione qual a inginição da moto")]
-        [DisplayName("Inginição")]
-        public int Ignition { get; set; }
+        [Required(ErrorMessage = "Adicione qual a ignição da moto")]
+        [DisplayName("Ignição")]
+        public string Ignition { get; set; }
 
         [Required(ErrorMessage = "Adicione qual o tipo de partidada moto")]
         [DisplayName("Partida")]
-        public int Start { get; set; }
+        public string Start { get; set; }
 
         [Required(ErrorMessage = "Adicione qual a bateria moto")]
         [DisplayName("Bateria")]
-        public int Battery { get; set; }
+        public string Battery { get; set; }
 
     }
 }
