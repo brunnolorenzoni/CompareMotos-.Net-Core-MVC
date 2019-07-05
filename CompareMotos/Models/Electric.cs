@@ -15,15 +15,15 @@ namespace CompareMotos.Models
 
         [Required(ErrorMessage = "Adicione qual a ignição da moto")]
         [DisplayName("Ignição")]
-        public string Ignition { get; set; }
+        public Ignition Ignition { get; set; }
 
         [Required(ErrorMessage = "Adicione qual o tipo de partidada moto")]
         [DisplayName("Partida")]
-        public string Start { get; set; }
+        public Start Start { get; set; }
 
         [Required(ErrorMessage = "Adicione qual a bateria moto")]
         [DisplayName("Bateria")]
-        public string Battery { get; set; }
+        public Battery Battery { get; set; }
 
     }
 }

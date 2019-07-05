@@ -15,19 +15,19 @@ namespace CompareMotos.Models
 
         [Required(ErrorMessage = "Adicione quantos tempos tem a moto")]
         [DisplayName("Tempo")]
-        public string Time { get; set; }
+        public TimeCycle TimeCycle { get; set; }
 
         [Required(ErrorMessage = "Adicione quantos cilindros tem da moto")]
         [DisplayName("Cilindros")]
-        public string Cylinder { get; set; }
+        public Cylinder Cylinder { get; set; }
 
         [Required(ErrorMessage = "Adicione quantas cilindradas tem da moto")]
         [DisplayName("Cilindradas")]
-        public double Displacement { get; set; }
+        public Displacement Displacement { get; set; }
 
         [Required(ErrorMessage = "Adicione a refrigeração da moto")]
         [DisplayName("Refrigeração")]
-        public double Cooling { get; set; }
+        public Cooling Cooling { get; set; }
 
     }
 }

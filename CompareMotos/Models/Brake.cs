@@ -14,11 +14,11 @@ namespace CompareMotos.Models
 
         [Required(ErrorMessage = "Adicione qual o tipo de freio dianteiro")]
         [DisplayName("Freio dianteiro")]
-        public string Front { get; set; }
+        public FrontBrake FrontBrake { get; set; }
 
         [Required(ErrorMessage = "Adicione qual o tipo de freio traseiro")]
         [DisplayName("Freio traseiro")]
-        public string Back { get; set; }
+        public BackBrake BackBrake { get; set; }
 
 
 
