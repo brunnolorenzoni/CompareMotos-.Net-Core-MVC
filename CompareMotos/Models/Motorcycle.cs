@@ -23,14 +23,14 @@ namespace CompareMotos.Models
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 
-        public int TypeId { get; set; }
-        public Type Type { get; set; }
+        public int TypeMotorcycleId { get; set; }
+        public TypeMotorcycle TypeMotorcycle { get; set; }
 
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
 
-        public int ModelId { get; set; }
-        public Model Model { get; set; }
+        public int ModelMotorcycleId { get; set; }
+        public ModelMotorcycle ModelMotorcycle { get; set; }
 
         public int EngineId { get; set; }
         public Engine Engine { get; set; }

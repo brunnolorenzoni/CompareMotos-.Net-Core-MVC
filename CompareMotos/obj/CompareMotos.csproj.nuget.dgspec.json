@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brunno_lorenzoni\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj": {}
+    "C:\\Users\\Brunno\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brunno_lorenzoni\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj": {
+    "C:\\Users\\Brunno\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brunno_lorenzoni\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj",
+        "projectUniqueName": "C:\\Users\\Brunno\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj",
         "projectName": "CompareMotos",
-        "projectPath": "C:\\Users\\brunno_lorenzoni\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj",
-        "packagesPath": "C:\\Users\\brunno_lorenzoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brunno_lorenzoni\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\obj\\",
+        "projectPath": "C:\\Users\\Brunno\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\CompareMotos.csproj",
+        "packagesPath": "C:\\Users\\Brunno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Brunno\\Desktop\\git\\CompareMotos-.Net-Core-MVC\\CompareMotos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\brunno_lorenzoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Brunno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             }
           },
           "imports": [
