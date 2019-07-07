@@ -15,12 +15,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Capacity)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Feeding)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -29,12 +23,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Capacity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Feeding)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.FuelId">Edit</a> |

@@ -19,11 +19,11 @@ namespace CompareMotos.Models
 
         [Required(ErrorMessage = "Adicione qual o tipo de combustivel")]
         [DisplayName("Tipo de combustivel")]
-        public string Type { get; set; }
+        public TypeFuel TypeFuel { get; set; }
 
         [Required(ErrorMessage = "Adicione qual o tipo de alimentação")]
         [DisplayName("Alimentação")]
-        public string Feeding { get; set; }
+        public Feeding Feeding { get; set; }
 
     }
 }

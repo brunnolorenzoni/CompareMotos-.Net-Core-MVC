@@ -66,7 +66,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(120, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9e6a42c63b147859bd36e87d6b39b64", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "121d1a66bee8430e9db8b51005cd8dd7", async() => {
                 BeginContext(143, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -96,7 +96,7 @@ using CompareMotos.Models;
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(360, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b077a9754e74527aa020f7cf3307d2d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17c07591c1a04631a0544d1e2795de8d", async() => {
                 BeginContext(411, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -131,7 +131,7 @@ using CompareMotos.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(439, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af7716505dd746fa9ecd925add07124a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d76faf004744f01a32e88f0f14207aa", async() => {
                 BeginContext(493, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -166,7 +166,7 @@ using CompareMotos.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(524, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8decf584c57d4334a96d1a0f8e58e5f4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "351883ffec9e4d0ea1ecb8cfcd5029db", async() => {
                 BeginContext(577, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

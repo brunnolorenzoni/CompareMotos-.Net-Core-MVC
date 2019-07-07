@@ -64,7 +64,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n<h2>Details</h2>\r\n\r\n<div>\r\n    <h4>Brake</h4>\r\n    <hr />\r\n    <dl class=\"dl-horizontal\">\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(202, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c245ed72f52d4588a1122211f9f2eec4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b0629b2f47b444ba8e25f21783bb186b", async() => {
                 BeginContext(253, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -99,7 +99,7 @@ using CompareMotos.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(269, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "250a3b59f6014fd6bb5648cccf18f3d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3aae9ab4001e4a9ca2454dca944ef1f6", async() => {
                 BeginContext(291, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

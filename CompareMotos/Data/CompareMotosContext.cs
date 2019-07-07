@@ -53,5 +53,11 @@ namespace CompareMotos.Models
         public DbSet<CompareMotos.Models.TypeTransmission> TypeTransmission { get; set; }
 
         public DbSet<CompareMotos.Models.ModelMotorcycle> ModelMotorcycle { get; set; }
+
+        public DbSet<CompareMotos.Models.Start> Start { get; set; }
+
+        public DbSet<CompareMotos.Models.TypeFuel> TypeFuel { get; set; }
+
+        public DbSet<CompareMotos.Models.Feeding> Feeding { get; set; }
     }
 }

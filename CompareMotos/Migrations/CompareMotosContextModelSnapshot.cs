@@ -201,6 +201,20 @@ namespace CompareMotos.Migrations
                     b.ToTable("Engine");
                 });
 
+            modelBuilder.Entity("CompareMotos.Models.Feeding", b =>
+                {
+                    b.Property<int>("FeedingId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("FeedingId");
+
+                    b.ToTable("Feeding");
+                });
+
             modelBuilder.Entity("CompareMotos.Models.FrontBrake", b =>
                 {
                     b.Property<int>("FrontBrakeId")
@@ -223,13 +237,15 @@ namespace CompareMotos.Migrations
 
                     b.Property<double>("Capacity");
 
-                    b.Property<string>("Feeding")
-                        .IsRequired();
+                    b.Property<int>("FeedingId");
 
-                    b.Property<string>("Type")
-                        .IsRequired();
+                    b.Property<int>("TypeFuelId");
 
                     b.HasKey("FuelId");
+
+                    b.HasIndex("FeedingId");
+
+                    b.HasIndex("TypeFuelId");
 
                     b.ToTable("Fuel");
                 });
@@ -359,6 +375,20 @@ namespace CompareMotos.Migrations
                     b.ToTable("Transmission");
                 });
 
+            modelBuilder.Entity("CompareMotos.Models.TypeFuel", b =>
+                {
+                    b.Property<int>("TypeFuelId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("TypeFuelId");
+
+                    b.ToTable("TypeFuel");
+                });
+
             modelBuilder.Entity("CompareMotos.Models.TypeMotorcycle", b =>
                 {
                     b.Property<int>("TypeMotorcycleId")
@@ -438,6 +468,19 @@ namespace CompareMotos.Migrations
                     b.HasOne("CompareMotos.Models.TimeCycle", "TimeCycle")
                         .WithMany()
                         .HasForeignKey("TimeCycleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CompareMotos.Models.Fuel", b =>
+                {
+                    b.HasOne("CompareMotos.Models.Feeding", "Feeding")
+                        .WithMany()
+                        .HasForeignKey("FeedingId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CompareMotos.Models.TypeFuel", "TypeFuel")
+                        .WithMany()
+                        .HasForeignKey("TypeFuelId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

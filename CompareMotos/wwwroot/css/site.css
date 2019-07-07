@@ -14,11 +14,6 @@ a {
     color: inherit;
 }
 
-body {
-    background-image: linear-gradient( 109.6deg, rgba(0,0,0,0.93) 11.2%, rgba(63,61,61,1) 78.9% );
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .header-wrapper {
     display: flex;
@@ -30,6 +25,7 @@ body {
     top: 0;
     left: 0;
     background: #000;
+    padding: 16px;
 }
 
 .header-wrapper .title {
@@ -61,7 +57,7 @@ body {
 
     .form-compare .divisor-form i{
         text-align: center;
-        color: white;
+        color: #000;
         font-size: 20px;
     }
 
@@ -72,11 +68,13 @@ body {
         width: 100%;
     }
 
-    .form-compare .container .input{
+    .form-compare .container .input {
         padding: 5px;
         width: 90%;
         max-width: 500px;
         height: 35px;
+        border: 1px solid #DADCE0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
     }
 
     .form-compare .container .btn {
@@ -86,3 +84,70 @@ body {
         border: 1px solid #DADCE0;
         font-weight: 700;
     }
+
+@media all and (min-width: 768px) {
+
+    .header-wrapper {
+        justify-content: flex-start;
+    }
+}
+
+.dashboard {
+    width: 100%;
+    padding: 16px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    
+}
+
+.dashboard .title {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+}
+
+.dashboard .section {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0px;
+}
+
+@media all and (min-width: 768px){
+    .dashboard .section {
+        width: calc(100% / 2)
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .dashboard .section {
+        width: calc(100% / 3);
+    }
+}
+
+.dashboard .section .sub-title {
+    font-size: 22px;
+}
+
+.dashboard .section .nav-list {
+    list-style-type: none;
+}
+
+
+.dashboard .section .nav-list .item {
+    margin: 5px auto;
+    transition: 333ms;
+
+}
+
+.dashboard .section .nav-list .item:hover {
+    transform: translate(5px);
+    font-weight: 700;
+    transition: 333ms;
+}
+
+.dashboard .section .nav-list .item a {
+    display: block;
+}   

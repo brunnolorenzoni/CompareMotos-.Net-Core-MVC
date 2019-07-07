@@ -60,7 +60,13 @@ namespace CompareMotos
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "dashboard",
+                    template: "Dashboard/{controller=Dashboard}/{action=Index}");
+
             });
+
         }
     }
 }
