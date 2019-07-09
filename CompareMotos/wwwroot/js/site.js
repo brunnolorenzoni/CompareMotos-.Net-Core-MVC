@@ -6,8 +6,6 @@
 
 $(document).ready(function () {
 
-        console.log("sf")
-
     $('#compare1').autocomplete({
         source: '/api/motorcycle/search'
     });

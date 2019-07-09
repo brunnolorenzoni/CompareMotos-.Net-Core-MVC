@@ -22,5 +22,25 @@ namespace CompareMotos.Controllers
         {
             return View();
         }
+
+        public IActionResult AmountGears()
+        {
+            return View();
+
+        }
+
+        public IActionResult Brakes()
+        {
+            return View();
+
+        }
+
+        public IActionResult Brands()
+        {
+            return RedirectToAction("Index", "Brands");
+
+        }
+
+
+        }
     }
-}

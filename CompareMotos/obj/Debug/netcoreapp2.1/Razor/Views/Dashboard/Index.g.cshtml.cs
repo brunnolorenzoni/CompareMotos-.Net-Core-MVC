@@ -92,7 +92,7 @@ using CompareMotos.Models;
                     ");
             EndContext();
             BeginContext(304, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b02a11d651fa472c981795e7acad063c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b84aa2169cc54f4b874dfc2fc01319d4", async() => {
                 BeginContext(371, 26, true);
                 WriteLiteral("Cadastrar os tipos de moto");
                 EndContext();
@@ -118,7 +118,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Fabricantes</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(644, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "375460f3728b47ee84317840b826be87", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "214aec3ee1e24f22a150653df588385c", async() => {
                 BeginContext(702, 21, true);
                 WriteLiteral("Cadastrar fabricantes");
                 EndContext();
@@ -144,7 +144,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Modelos de motos</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(975, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3648aeba653649d7b7bb8a12a2683801", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb4e411e34da454e969d4736dd291792", async() => {
                 BeginContext(1043, 24, true);
                 WriteLiteral("Cadastrar modelo de moto");
                 EndContext();
@@ -170,7 +170,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Sistema de Motor</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1319, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "95dce6e40b9e4a958e04bd677c6134cd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d04957b8e9694f06be6e1de0c445eb44", async() => {
                 BeginContext(1378, 29, true);
                 WriteLiteral("Cadastrar um sistema de motor");
                 EndContext();
@@ -196,7 +196,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1491, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76818bbe5291477cae2f76ff95a3baa5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6377fedff03470b8269b4843c6d0393", async() => {
                 BeginContext(1553, 16, true);
                 WriteLiteral("Cadastrar tempos");
                 EndContext();
@@ -222,7 +222,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1653, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61c7e04720dd48d9be6d29b2f71cd21a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2511800465204056b926c2bbb1cb13f7", async() => {
                 BeginContext(1714, 19, true);
                 WriteLiteral("Cadastrar cilindros");
                 EndContext();
@@ -248,7 +248,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1817, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "142c7d1a320249b79c1cc6703ff5d57b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15460f8e5bd7465e8b5bcabbd2efb702", async() => {
                 BeginContext(1882, 21, true);
                 WriteLiteral("Cadastrar cilindradas");
                 EndContext();
@@ -274,7 +274,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1987, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76e1aa32cd674c0093f8b3da3dd55e3d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa9128c8d6ca445684fbcc4a59ec6aec", async() => {
                 BeginContext(2047, 22, true);
                 WriteLiteral("Cadastrar refrigeração");
                 EndContext();
@@ -300,7 +300,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Sistema de Combustivel</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(2327, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c1049561ce94fc4945bfbceb68c2ee4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c88d415ab1a5469884975ace927a4fed", async() => {
                 BeginContext(2384, 35, true);
                 WriteLiteral("Cadastrar um sistema de combustivel");
                 EndContext();
@@ -326,7 +326,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(2503, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb022a692b364454842e2596a10c8d09", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15cf3474e7a54f2fa6f7a79d3f1627eb", async() => {
                 BeginContext(2564, 30, true);
                 WriteLiteral("Cadastrar tipos de combustivel");
                 EndContext();
@@ -352,7 +352,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(2678, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40720661f4b34c40aef83ef157692352", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5e95b04ff7841efa2702077eaf5bb3e", async() => {
                 BeginContext(2737, 30, true);
                 WriteLiteral("Cadastrar tipos de alimentação");
                 EndContext();
@@ -378,7 +378,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Sistema Eletrico</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(3019, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eeefc13987b84458be3c9f722e1d3429", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e02341c9ad004fe5b994c09985422f01", async() => {
                 BeginContext(3079, 29, true);
                 WriteLiteral("Cadastrar um sistema eletrico");
                 EndContext();
@@ -404,7 +404,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(3192, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ff41b8a18614c0484eed88fa8db6068", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3315251974e14f7198240eb60f57c5db", async() => {
                 BeginContext(3253, 25, true);
                 WriteLiteral("Cadastrar tipo de ignição");
                 EndContext();
@@ -430,7 +430,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(3362, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68bea23da8c540b1bf78c62413c5d28c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c11c21614f664d47b9a6f3f99ecb55a1", async() => {
                 BeginContext(3420, 25, true);
                 WriteLiteral("Cadastrar tipo de partida");
                 EndContext();
@@ -456,7 +456,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(3529, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44cffb6c478b41d586195591f93beefd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "596ea58fd00b4c00aa0a2351e10021b3", async() => {
                 BeginContext(3590, 25, true);
                 WriteLiteral("Cadastrar tipo de bateria");
                 EndContext();
@@ -482,7 +482,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Sistema de freio</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(3869, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3884a26c65c4b91a68feede15baacbf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f11e0d03e82547c0971cc41ef5523c5e", async() => {
                 BeginContext(3927, 29, true);
                 WriteLiteral("Cadastrar um sistema de freio");
                 EndContext();
@@ -508,7 +508,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(4040, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7cde3622af45431985ff4aea44f0da9b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5591ff0cd9c42bbae871d80f24f9dc1", async() => {
                 BeginContext(4103, 25, true);
                 WriteLiteral("Cadastrar freio dianteiro");
                 EndContext();
@@ -534,7 +534,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(4212, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db4ebd647aa843f3a606930682644eb2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79b788ceebe744179a54ce23426cf513", async() => {
                 BeginContext(4274, 24, true);
                 WriteLiteral("Cadastrar freio traseiro");
                 EndContext();
@@ -560,7 +560,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Sistema de transmissão</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(4556, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41d27152746046b1a0edfbe0c177c90e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13d2b93f59794ad4a1e9d942215f9167", async() => {
                 BeginContext(4621, 35, true);
                 WriteLiteral("Cadastrar um sistema de transmissão");
                 EndContext();
@@ -586,7 +586,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(4740, 105, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb8d0673813d43289b94464994b4242f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e63dbd06a4d48468f2cff1008d68550", async() => {
                 BeginContext(4809, 32, true);
                 WriteLiteral("Cadastrar um tipo de transmissão");
                 EndContext();
@@ -612,7 +612,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(4925, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de947094cfe6430c9311debefad92382", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af6a7803399d487b864cefc1d1b40f26", async() => {
                 BeginContext(4988, 35, true);
                 WriteLiteral("Cadastrar uma quantidade de marhcas");
                 EndContext();
@@ -638,7 +638,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Dimensões</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(5268, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c563ee490a3349b591d401eb42c77d4e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ff83e46f09d44d4892f782c19ab085b", async() => {
                 BeginContext(5330, 19, true);
                 WriteLiteral("Cadastrar dimensões");
                 EndContext();
