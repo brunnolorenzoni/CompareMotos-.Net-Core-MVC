@@ -6,8 +6,10 @@
     <title>@ViewData["Title"] - CompareMotos</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-   
+
     <!--
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -27,18 +29,9 @@
     <environment exclude="Development">
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    </head>
+</head>
 <body>
 
-    <header class="header-wrapper">
-
-        <h1 class="title">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">CompareMotos</a>
-        </h1>
-
-    </header>
-
-    <partial name="_CookieConsentPartial" />
 
     <main class="main-wrapper">
         @RenderBody()
