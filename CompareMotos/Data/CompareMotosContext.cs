@@ -30,8 +30,6 @@ namespace CompareMotos.Models
 
         public DbSet<CompareMotos.Models.Cylinder> Cylinder { get; set; }
 
-        public DbSet<CompareMotos.Models.Dimensions> Dimensions { get; set; }
-
         public DbSet<CompareMotos.Models.Displacement> Displacement { get; set; }
 
         public DbSet<CompareMotos.Models.Electric> Electric { get; set; }

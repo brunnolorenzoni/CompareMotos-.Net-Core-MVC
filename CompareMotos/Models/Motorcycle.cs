@@ -21,7 +21,24 @@ namespace CompareMotos.Models
 
         [Required(ErrorMessage = "Adicione o valor da moto")]
         [DataType(DataType.Currency)]
+        [DisplayName("Preço")]
         public double Price { get; set; }
+
+        [Required(ErrorMessage = "Adicione o comprimento da moto")]
+        [DisplayName("Comprimento")]
+        public double Length { get; set; }
+
+        [Required(ErrorMessage = "Adicione o largura da moto")]
+        [DisplayName("Largura")]
+        public double Width { get; set; }
+
+        [Required(ErrorMessage = "Adicione o altura da moto")]
+        [DisplayName("Altura")]
+        public double Height { get; set; }
+
+        [Required(ErrorMessage = "Adicione o peso da moto")]
+        [DisplayName("Peso")]
+        public double Weight { get; set; }
 
         public int TypeMotorcycleId { get; set; }
         public TypeMotorcycle TypeMotorcycle { get; set; }
@@ -47,8 +64,6 @@ namespace CompareMotos.Models
         public int TransmissionId { get; set; }
         public Transmission Transmission { get; set;}
 
-        public int DimensionsId { get; set; }
-        public Dimensions Dimensions { get; set; }
 
     }
 }

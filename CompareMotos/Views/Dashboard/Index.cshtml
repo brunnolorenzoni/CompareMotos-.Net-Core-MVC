@@ -2,129 +2,139 @@
     ViewData["Title"] = "Index";
 }
 
-    <div class="dashboard">
+<div class="dashboard">
 
-        <h1 class="title">Cadastro de motos</h1>
+    <h1 class="title">Cadastro de motos</h1>
 
-        <section class="section">
-            <h2 class="sub-title">Tipo de moto</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="TypeMotorcycles" asp-action="Index">Cadastrar os tipos de moto</a>
-                </li>
-            </ul>
-        </section>
 
-        <section class="section">
-            <h2 class="sub-title">Fabricantes</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Brands" asp-action="Index">Cadastrar fabricantes</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Moto</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Motorcycles" asp-action="Index">Cadastrar moto</a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Modelos de motos</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="ModelMotorcycles" asp-action="Index">Cadastrar modelo de moto</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Tipo de moto</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="TypeMotorcycles" asp-action="Index">Cadastrar os tipos de moto</a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Sistema de Motor</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Engines" asp-action="Index">Cadastrar um sistema de motor</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="TimeCycles" asp-action="Index">Cadastrar tempos</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Cylinders" asp-action="Index">Cadastrar cilindros</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Displacements" asp-action="Index">Cadastrar cilindradas</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Coolings" asp-action="Index">Cadastrar refrigeração</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Fabricantes</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Brands" asp-action="Index">Cadastrar fabricantes</a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Sistema de Combustivel</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Fuels" asp-action="Index">Cadastrar um sistema de combustivel</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="FuelTypes" asp-action="Index">Cadastrar tipos de combustivel</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Feeding" asp-action="Index">Cadastrar tipos de alimentação</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Modelos de motos</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="ModelMotorcycles" asp-action="Index">Cadastrar modelo de moto</a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Sistema Eletrico</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Eletrics" asp-action="Index">Cadastrar um sistema eletrico</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Ignitions" asp-action="Index">Cadastrar tipo de ignição</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Starts" asp-action="Index">Cadastrar tipo de partida</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="Batteries" asp-action="Index">Cadastrar tipo de bateria</a>
-                </li>
+    <section class="section">
+        <h2 class="sub-title">Sistema de Motor</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Engines" asp-action="Index">Cadastrar um sistema de motor</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="TimeCycles" asp-action="Index">Cadastrar tempos</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Cylinders" asp-action="Index">Cadastrar cilindros</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Displacements" asp-action="Index">Cadastrar cilindradas</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Coolings" asp-action="Index">Cadastrar refrigeração</a>
+            </li>
+        </ul>
+    </section>
 
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Sistema de Combustivel</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Fuels" asp-action="Index">Cadastrar um sistema de combustivel</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="FuelTypes" asp-action="Index">Cadastrar tipos de combustivel</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Feeding" asp-action="Index">Cadastrar tipos de alimentação</a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Sistema de freio</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Brakes" asp-action="Index">Cadastrar um sistema de freio</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="FrontBrakes" asp-action="Index">Cadastrar freio dianteiro</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="BackBrakes" asp-action="Index">Cadastrar freio traseiro</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Sistema Eletrico</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Eletrics" asp-action="Index">Cadastrar um sistema eletrico</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Ignitions" asp-action="Index">Cadastrar tipo de ignição</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Starts" asp-action="Index">Cadastrar tipo de partida</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="Batteries" asp-action="Index">Cadastrar tipo de bateria</a>
+            </li>
 
-        <section class="section">
-            <h2 class="sub-title">Sistema de transmissão</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Transmissions" asp-action="Index">Cadastrar um sistema de transmissão</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="TypeTransmissions" asp-action="Index">Cadastrar um tipo de transmissão</a>
-                </li>
-                <li class="item">
-                    <a asp-area="" asp-controller="AmountGears" asp-action="Index">Cadastrar uma quantidade de marhcas</a>
-                </li>
-            </ul>
-        </section>
+        </ul>
+    </section>
 
-        <section class="section">
-            <h2 class="sub-title">Dimensões</h2>
-            <ul class="nav-list">
-                <li class="item">
-                    <a asp-area="" asp-controller="Dimensions" asp-action="Index">Cadastrar dimensões</a>
-                </li>
-            </ul>
-        </section>
+    <section class="section">
+        <h2 class="sub-title">Sistema de freio</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Brakes" asp-action="Index">Cadastrar um sistema de freio</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="FrontBrakes" asp-action="Index">Cadastrar freio dianteiro</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="BackBrakes" asp-action="Index">Cadastrar freio traseiro</a>
+            </li>
+        </ul>
+    </section>
 
-    </div>
+    <section class="section">
+        <h2 class="sub-title">Sistema de transmissão</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Transmissions" asp-action="Index">Cadastrar um sistema de transmissão</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="TypeTransmissions" asp-action="Index">Cadastrar um tipo de transmissão</a>
+            </li>
+            <li class="item">
+                <a asp-area="" asp-controller="AmountGears" asp-action="Index">Cadastrar uma quantidade de marhcas</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="sub-title">Dimensões</h2>
+        <ul class="nav-list">
+            <li class="item">
+                <a asp-area="" asp-controller="Dimensions" asp-action="Index">Cadastrar dimensões</a>
+            </li>
+        </ul>
+    </section>
+
+</div>

@@ -16,9 +16,9 @@ a {
 
 .main-wrapper {
     display:        block;
-    height:         100vh;
     position:       relative;
     width:          100%;
+    padding: 16px;
 }
 
     .main-wrapper .title .logo {
