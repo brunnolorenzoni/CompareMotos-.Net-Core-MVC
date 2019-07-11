@@ -21,7 +21,8 @@ namespace CompareMotos.Controllers
         // GET: Brakes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Brake.ToListAsync());
+            var compareMotosContext = _context.Brake.Include(b => b.BackBrake).Include(b => b.FrontBrake);
+            return View(await compareMotosContext.ToListAsync());
         }
 
         // GET: Brakes/Details/5
@@ -33,6 +34,8 @@ namespace CompareMotos.Controllers
             }
 
             var brake = await _context.Brake
+                .Include(b => b.BackBrake)
+                .Include(b => b.FrontBrake)
                 .FirstOrDefaultAsync(m => m.BrakeId == id);
             if (brake == null)
             {
@@ -45,6 +48,8 @@ namespace CompareMotos.Controllers
         // GET: Brakes/Create
         public IActionResult Create()
         {
+            ViewData["BackBrakeId"] = new SelectList(_context.BackBrake, "BackBrakeeId", "Name");
+            ViewData["FrontBrakeId"] = new SelectList(_context.FrontBrake, "FrontBrakeId", "Name");
             return View();
         }
 
@@ -53,7 +58,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BrakeId")] Brake brake)
+        public async Task<IActionResult> Create([Bind("BrakeId,FrontBrakeId,BackBrakeId")] Brake brake)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +66,8 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BackBrakeId"] = new SelectList(_context.BackBrake, "BackBrakeeId", "Name", brake.BackBrakeId);
+            ViewData["FrontBrakeId"] = new SelectList(_context.FrontBrake, "FrontBrakeId", "Name", brake.FrontBrakeId);
             return View(brake);
         }
 
@@ -77,6 +84,8 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
+            ViewData["BackBrakeId"] = new SelectList(_context.BackBrake, "BackBrakeeId", "Name", brake.BackBrakeId);
+            ViewData["FrontBrakeId"] = new SelectList(_context.FrontBrake, "FrontBrakeId", "Name", brake.FrontBrakeId);
             return View(brake);
         }
 
@@ -85,7 +94,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BrakeId")] Brake brake)
+        public async Task<IActionResult> Edit(int id, [Bind("BrakeId,FrontBrakeId,BackBrakeId")] Brake brake)
         {
             if (id != brake.BrakeId)
             {
@@ -112,6 +121,8 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BackBrakeId"] = new SelectList(_context.BackBrake, "BackBrakeeId", "Name", brake.BackBrakeId);
+            ViewData["FrontBrakeId"] = new SelectList(_context.FrontBrake, "FrontBrakeId", "Name", brake.FrontBrakeId);
             return View(brake);
         }
 
@@ -124,6 +135,8 @@ namespace CompareMotos.Controllers
             }
 
             var brake = await _context.Brake
+                .Include(b => b.BackBrake)
+                .Include(b => b.FrontBrake)
                 .FirstOrDefaultAsync(m => m.BrakeId == id);
             if (brake == null)
             {

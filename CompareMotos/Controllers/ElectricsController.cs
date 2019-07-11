@@ -21,7 +21,8 @@ namespace CompareMotos.Controllers
         // GET: Electrics
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Electric.ToListAsync());
+            var compareMotosContext = _context.Electric.Include(e => e.Battery).Include(e => e.Ignition).Include(e => e.Start);
+            return View(await compareMotosContext.ToListAsync());
         }
 
         // GET: Electrics/Details/5
@@ -33,6 +34,9 @@ namespace CompareMotos.Controllers
             }
 
             var electric = await _context.Electric
+                .Include(e => e.Battery)
+                .Include(e => e.Ignition)
+                .Include(e => e.Start)
                 .FirstOrDefaultAsync(m => m.ElectricId == id);
             if (electric == null)
             {
@@ -45,6 +49,9 @@ namespace CompareMotos.Controllers
         // GET: Electrics/Create
         public IActionResult Create()
         {
+            ViewData["BatteryId"] = new SelectList(_context.Battery, "BatteryId", "Name");
+            ViewData["IgnitionId"] = new SelectList(_context.Ignition, "IgnitionId", "Name");
+            ViewData["StartId"] = new SelectList(_context.Start, "StartId", "Name");
             return View();
         }
 
@@ -53,7 +60,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ElectricId")] Electric electric)
+        public async Task<IActionResult> Create([Bind("ElectricId,IgnitionId,StartId,BatteryId")] Electric electric)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +68,9 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BatteryId"] = new SelectList(_context.Battery, "BatteryId", "Name", electric.BatteryId);
+            ViewData["IgnitionId"] = new SelectList(_context.Ignition, "IgnitionId", "Name", electric.IgnitionId);
+            ViewData["StartId"] = new SelectList(_context.Start, "StartId", "Name", electric.StartId);
             return View(electric);
         }
 
@@ -77,6 +87,9 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
+            ViewData["BatteryId"] = new SelectList(_context.Battery, "BatteryId", "Name", electric.BatteryId);
+            ViewData["IgnitionId"] = new SelectList(_context.Ignition, "IgnitionId", "Name", electric.IgnitionId);
+            ViewData["StartId"] = new SelectList(_context.Start, "StartId", "Name", electric.StartId);
             return View(electric);
         }
 
@@ -85,7 +98,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ElectricId")] Electric electric)
+        public async Task<IActionResult> Edit(int id, [Bind("ElectricId,IgnitionId,StartId,BatteryId")] Electric electric)
         {
             if (id != electric.ElectricId)
             {
@@ -112,6 +125,9 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BatteryId"] = new SelectList(_context.Battery, "BatteryId", "Name", electric.BatteryId);
+            ViewData["IgnitionId"] = new SelectList(_context.Ignition, "IgnitionId", "Name", electric.IgnitionId);
+            ViewData["StartId"] = new SelectList(_context.Start, "StartId", "Name", electric.StartId);
             return View(electric);
         }
 
@@ -124,6 +140,9 @@ namespace CompareMotos.Controllers
             }
 
             var electric = await _context.Electric
+                .Include(e => e.Battery)
+                .Include(e => e.Ignition)
+                .Include(e => e.Start)
                 .FirstOrDefaultAsync(m => m.ElectricId == id);
             if (electric == null)
             {

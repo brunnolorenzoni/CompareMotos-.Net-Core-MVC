@@ -12,12 +12,36 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeCycle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cylinder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Displacement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cooling)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeCycle.TimeCycleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cylinder.CylinderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Displacement.DisplacementId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cooling.Name)
+            </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.EngineId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.EngineId">Details</a> |

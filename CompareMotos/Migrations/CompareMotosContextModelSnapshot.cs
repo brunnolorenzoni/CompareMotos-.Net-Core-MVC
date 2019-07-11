@@ -65,13 +65,13 @@ namespace CompareMotos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BackBrakeeId");
+                    b.Property<int>("BackBrakeId");
 
                     b.Property<int>("FrontBrakeId");
 
                     b.HasKey("BrakeId");
 
-                    b.HasIndex("BackBrakeeId");
+                    b.HasIndex("BackBrakeId");
 
                     b.HasIndex("FrontBrakeId");
 
@@ -117,25 +117,6 @@ namespace CompareMotos.Migrations
                     b.HasKey("CylinderId");
 
                     b.ToTable("Cylinder");
-                });
-
-            modelBuilder.Entity("CompareMotos.Models.Dimensions", b =>
-                {
-                    b.Property<int>("DimensionsId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<double>("Height");
-
-                    b.Property<double>("Length");
-
-                    b.Property<double>("Weight");
-
-                    b.Property<double>("Width");
-
-                    b.HasKey("DimensionsId");
-
-                    b.ToTable("Dimensions");
                 });
 
             modelBuilder.Entity("CompareMotos.Models.Displacement", b =>
@@ -288,13 +269,15 @@ namespace CompareMotos.Migrations
 
                     b.Property<int>("BrandId");
 
-                    b.Property<int>("DimensionsId");
-
                     b.Property<int>("ElectricId");
 
                     b.Property<int>("EngineId");
 
                     b.Property<int>("FuelId");
+
+                    b.Property<double>("Height");
+
+                    b.Property<double>("Length");
 
                     b.Property<int>("ModelMotorcycleId");
 
@@ -304,6 +287,10 @@ namespace CompareMotos.Migrations
 
                     b.Property<int>("TypeMotorcycleId");
 
+                    b.Property<double>("Weight");
+
+                    b.Property<double>("Width");
+
                     b.Property<int>("Year");
 
                     b.HasKey("MotorcycleId");
@@ -311,8 +298,6 @@ namespace CompareMotos.Migrations
                     b.HasIndex("BrakeId");
 
                     b.HasIndex("BrandId");
-
-                    b.HasIndex("DimensionsId");
 
                     b.HasIndex("ElectricId");
 
@@ -421,7 +406,7 @@ namespace CompareMotos.Migrations
                 {
                     b.HasOne("CompareMotos.Models.BackBrake", "BackBrake")
                         .WithMany()
-                        .HasForeignKey("BackBrakeeId")
+                        .HasForeignKey("BackBrakeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CompareMotos.Models.FrontBrake", "FrontBrake")
@@ -494,11 +479,6 @@ namespace CompareMotos.Migrations
                     b.HasOne("CompareMotos.Models.Brand", "Brand")
                         .WithMany()
                         .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("CompareMotos.Models.Dimensions", "Dimensions")
-                        .WithMany()
-                        .HasForeignKey("DimensionsId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CompareMotos.Models.Electric", "Electric")

@@ -11,6 +11,30 @@
     <h4>Engine</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCycle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TimeCycle.TimeCycleId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cylinder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cylinder.CylinderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Displacement)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Displacement.DisplacementId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cooling)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cooling.Name)
+        </dd>
     </dl>
     
     <form asp-action="Delete">

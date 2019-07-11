@@ -64,7 +64,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n\r\n    \r\n    <h1 class=\"title\">\r\n        ");
             EndContext();
             BeginContext(87, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "24105707eec64c4d822f54db30ac928a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c78afb4a8fb946da888864158e71668a", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -83,7 +83,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n        <span class=\"title-float\">CompareMotos</span>\r\n    </h1>\r\n    \r\n    ");
             EndContext();
             BeginContext(209, 709, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "310159681f6c4a7f82a9994983e420d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5155fc86d3b44191b9e90fe20e2badfd", async() => {
                 BeginContext(236, 675, true);
                 WriteLiteral(@"
 

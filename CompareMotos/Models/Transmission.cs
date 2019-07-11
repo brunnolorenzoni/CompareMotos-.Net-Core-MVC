@@ -12,10 +12,12 @@ namespace CompareMotos.Models
         [Key]
         public int TransmissionId { get; set; }
 
+        public int TypeTransmissionId { get; set; }
         [Required(ErrorMessage = "Adicione o tipo da tramissão da moto")]
         [DisplayName("Tipo")]
         public TypeTransmission TypeTransmission { get; set; }
 
+        public int AmountGearId { get; set; }
         [Required(ErrorMessage = "Adicione quantas marchas tem da moto")]
         [DisplayName("Marchas")]
         public AmountGear AmountGear { get; set; }

@@ -14,6 +14,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="BrakeId" />
             <div class="form-group">
+                <label asp-for="FrontBrakeId" class="control-label"></label>
+                <select asp-for="FrontBrakeId" class="form-control" asp-items="ViewBag.FrontBrakeId"></select>
+                <span asp-validation-for="FrontBrakeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackBrakeId" class="control-label"></label>
+                <select asp-for="BackBrakeId" class="form-control" asp-items="ViewBag.BackBrakeId"></select>
+                <span asp-validation-for="BackBrakeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>

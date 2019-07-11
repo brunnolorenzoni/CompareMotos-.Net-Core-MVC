@@ -21,7 +21,8 @@ namespace CompareMotos.Controllers
         // GET: Transmissions
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Transmission.ToListAsync());
+            var compareMotosContext = _context.Transmission.Include(t => t.AmountGear).Include(t => t.TypeTransmission);
+            return View(await compareMotosContext.ToListAsync());
         }
 
         // GET: Transmissions/Details/5
@@ -33,6 +34,8 @@ namespace CompareMotos.Controllers
             }
 
             var transmission = await _context.Transmission
+                .Include(t => t.AmountGear)
+                .Include(t => t.TypeTransmission)
                 .FirstOrDefaultAsync(m => m.TransmissionId == id);
             if (transmission == null)
             {
@@ -45,6 +48,8 @@ namespace CompareMotos.Controllers
         // GET: Transmissions/Create
         public IActionResult Create()
         {
+            ViewData["AmountGearId"] = new SelectList(_context.AmountGear, "AmountGearId", "AmountGearId");
+            ViewData["TypeTransmissionId"] = new SelectList(_context.TypeTransmission, "TypeTransmissionId", "Name");
             return View();
         }
 
@@ -53,7 +58,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TransmissionId")] Transmission transmission)
+        public async Task<IActionResult> Create([Bind("TransmissionId,TypeTransmissionId,AmountGearId")] Transmission transmission)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +66,8 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AmountGearId"] = new SelectList(_context.AmountGear, "AmountGearId", "AmountGearId", transmission.AmountGearId);
+            ViewData["TypeTransmissionId"] = new SelectList(_context.TypeTransmission, "TypeTransmissionId", "Name", transmission.TypeTransmissionId);
             return View(transmission);
         }
 
@@ -77,6 +84,8 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
+            ViewData["AmountGearId"] = new SelectList(_context.AmountGear, "AmountGearId", "AmountGearId", transmission.AmountGearId);
+            ViewData["TypeTransmissionId"] = new SelectList(_context.TypeTransmission, "TypeTransmissionId", "Name", transmission.TypeTransmissionId);
             return View(transmission);
         }
 
@@ -85,7 +94,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TransmissionId")] Transmission transmission)
+        public async Task<IActionResult> Edit(int id, [Bind("TransmissionId,TypeTransmissionId,AmountGearId")] Transmission transmission)
         {
             if (id != transmission.TransmissionId)
             {
@@ -112,6 +121,8 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AmountGearId"] = new SelectList(_context.AmountGear, "AmountGearId", "AmountGearId", transmission.AmountGearId);
+            ViewData["TypeTransmissionId"] = new SelectList(_context.TypeTransmission, "TypeTransmissionId", "Name", transmission.TypeTransmissionId);
             return View(transmission);
         }
 
@@ -124,6 +135,8 @@ namespace CompareMotos.Controllers
             }
 
             var transmission = await _context.Transmission
+                .Include(t => t.AmountGear)
+                .Include(t => t.TypeTransmission)
                 .FirstOrDefaultAsync(m => m.TransmissionId == id);
             if (transmission == null)
             {

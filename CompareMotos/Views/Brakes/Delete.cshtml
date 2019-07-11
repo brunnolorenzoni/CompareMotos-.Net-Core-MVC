@@ -11,6 +11,18 @@
     <h4>Brake</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FrontBrake)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FrontBrake.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BackBrake)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BackBrake.Name)
+        </dd>
     </dl>
     
     <form asp-action="Delete">

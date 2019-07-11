@@ -17,6 +17,18 @@
         <dd>
             @Html.DisplayFor(model => model.Capacity)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeFuel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeFuel.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Feeding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Feeding.Name)
+        </dd>
     </dl>
     
     <form asp-action="Delete">

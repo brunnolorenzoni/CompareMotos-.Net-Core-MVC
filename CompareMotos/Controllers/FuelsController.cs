@@ -21,7 +21,8 @@ namespace CompareMotos.Controllers
         // GET: Fuels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Fuel.ToListAsync());
+            var compareMotosContext = _context.Fuel.Include(f => f.Feeding).Include(f => f.TypeFuel);
+            return View(await compareMotosContext.ToListAsync());
         }
 
         // GET: Fuels/Details/5
@@ -33,6 +34,8 @@ namespace CompareMotos.Controllers
             }
 
             var fuel = await _context.Fuel
+                .Include(f => f.Feeding)
+                .Include(f => f.TypeFuel)
                 .FirstOrDefaultAsync(m => m.FuelId == id);
             if (fuel == null)
             {
@@ -45,6 +48,8 @@ namespace CompareMotos.Controllers
         // GET: Fuels/Create
         public IActionResult Create()
         {
+            ViewData["FeedingId"] = new SelectList(_context.Feeding, "FeedingId", "Name");
+            ViewData["TypeFuelId"] = new SelectList(_context.TypeFuel, "TypeFuelId", "Name");
             return View();
         }
 
@@ -53,7 +58,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FuelId,Capacity")] Fuel fuel)
+        public async Task<IActionResult> Create([Bind("FuelId,Capacity,TypeFuelId,FeedingId")] Fuel fuel)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +66,8 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["FeedingId"] = new SelectList(_context.Feeding, "FeedingId", "Name", fuel.FeedingId);
+            ViewData["TypeFuelId"] = new SelectList(_context.TypeFuel, "TypeFuelId", "Name", fuel.TypeFuelId);
             return View(fuel);
         }
 
@@ -77,6 +84,8 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
+            ViewData["FeedingId"] = new SelectList(_context.Feeding, "FeedingId", "Name", fuel.FeedingId);
+            ViewData["TypeFuelId"] = new SelectList(_context.TypeFuel, "TypeFuelId", "Name", fuel.TypeFuelId);
             return View(fuel);
         }
 
@@ -85,7 +94,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FuelId,Capacity")] Fuel fuel)
+        public async Task<IActionResult> Edit(int id, [Bind("FuelId,Capacity,TypeFuelId,FeedingId")] Fuel fuel)
         {
             if (id != fuel.FuelId)
             {
@@ -112,6 +121,8 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["FeedingId"] = new SelectList(_context.Feeding, "FeedingId", "Name", fuel.FeedingId);
+            ViewData["TypeFuelId"] = new SelectList(_context.TypeFuel, "TypeFuelId", "Name", fuel.TypeFuelId);
             return View(fuel);
         }
 
@@ -124,6 +135,8 @@ namespace CompareMotos.Controllers
             }
 
             var fuel = await _context.Fuel
+                .Include(f => f.Feeding)
+                .Include(f => f.TypeFuel)
                 .FirstOrDefaultAsync(m => m.FuelId == id);
             if (fuel == null)
             {

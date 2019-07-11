@@ -14,6 +14,26 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="EngineId" />
             <div class="form-group">
+                <label asp-for="TimeCycleId" class="control-label"></label>
+                <select asp-for="TimeCycleId" class="form-control" asp-items="ViewBag.TimeCycleId"></select>
+                <span asp-validation-for="TimeCycleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CylinderId" class="control-label"></label>
+                <select asp-for="CylinderId" class="form-control" asp-items="ViewBag.CylinderId"></select>
+                <span asp-validation-for="CylinderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DisplacementId" class="control-label"></label>
+                <select asp-for="DisplacementId" class="form-control" asp-items="ViewBag.DisplacementId"></select>
+                <span asp-validation-for="DisplacementId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolingId" class="control-label"></label>
+                <select asp-for="CoolingId" class="form-control" asp-items="ViewBag.CoolingId"></select>
+                <span asp-validation-for="CoolingId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>

@@ -21,7 +21,8 @@ namespace CompareMotos.Controllers
         // GET: Engines
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Engine.ToListAsync());
+            var compareMotosContext = _context.Engine.Include(e => e.Cooling).Include(e => e.Cylinder).Include(e => e.Displacement).Include(e => e.TimeCycle);
+            return View(await compareMotosContext.ToListAsync());
         }
 
         // GET: Engines/Details/5
@@ -33,6 +34,10 @@ namespace CompareMotos.Controllers
             }
 
             var engine = await _context.Engine
+                .Include(e => e.Cooling)
+                .Include(e => e.Cylinder)
+                .Include(e => e.Displacement)
+                .Include(e => e.TimeCycle)
                 .FirstOrDefaultAsync(m => m.EngineId == id);
             if (engine == null)
             {
@@ -45,6 +50,10 @@ namespace CompareMotos.Controllers
         // GET: Engines/Create
         public IActionResult Create()
         {
+            ViewData["CoolingId"] = new SelectList(_context.Cooling, "CoolingId", "Name");
+            ViewData["CylinderId"] = new SelectList(_context.Cylinder, "CylinderId", "Name");
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "Name");
+            ViewData["TimeCycleId"] = new SelectList(_context.TimeCycle, "TimeCycleId", "Name");
             return View();
         }
 
@@ -53,7 +62,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EngineId")] Engine engine)
+        public async Task<IActionResult> Create([Bind("EngineId,TimeCycleId,CylinderId,DisplacementId,CoolingId")] Engine engine)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +70,10 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CoolingId"] = new SelectList(_context.Cooling, "CoolingId", "Name", engine.CoolingId);
+            ViewData["CylinderId"] = new SelectList(_context.Cylinder, "CylinderId", "CylinderId", engine.CylinderId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "DisplacementId", engine.DisplacementId);
+            ViewData["TimeCycleId"] = new SelectList(_context.TimeCycle, "TimeCycleId", "TimeCycleId", engine.TimeCycleId);
             return View(engine);
         }
 
@@ -77,6 +90,10 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
+            ViewData["CoolingId"] = new SelectList(_context.Cooling, "CoolingId", "Name", engine.CoolingId);
+            ViewData["CylinderId"] = new SelectList(_context.Cylinder, "CylinderId", "CylinderId", engine.CylinderId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "DisplacementId", engine.DisplacementId);
+            ViewData["TimeCycleId"] = new SelectList(_context.TimeCycle, "TimeCycleId", "TimeCycleId", engine.TimeCycleId);
             return View(engine);
         }
 
@@ -85,7 +102,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EngineId")] Engine engine)
+        public async Task<IActionResult> Edit(int id, [Bind("EngineId,TimeCycleId,CylinderId,DisplacementId,CoolingId")] Engine engine)
         {
             if (id != engine.EngineId)
             {
@@ -112,6 +129,10 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CoolingId"] = new SelectList(_context.Cooling, "CoolingId", "Name", engine.CoolingId);
+            ViewData["CylinderId"] = new SelectList(_context.Cylinder, "CylinderId", "CylinderId", engine.CylinderId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "DisplacementId", engine.DisplacementId);
+            ViewData["TimeCycleId"] = new SelectList(_context.TimeCycle, "TimeCycleId", "TimeCycleId", engine.TimeCycleId);
             return View(engine);
         }
 
@@ -124,6 +145,10 @@ namespace CompareMotos.Controllers
             }
 
             var engine = await _context.Engine
+                .Include(e => e.Cooling)
+                .Include(e => e.Cylinder)
+                .Include(e => e.Displacement)
+                .Include(e => e.TimeCycle)
                 .FirstOrDefaultAsync(m => m.EngineId == id);
             if (engine == null)
             {
