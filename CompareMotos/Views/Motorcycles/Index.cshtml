@@ -40,19 +40,7 @@
                 @Html.DisplayNameFor(model => model.ModelMotorcycle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Engine)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fuel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Electric)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brake)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Transmission)
+                @Html.DisplayNameFor(model => model.Displacement)
             </th>
             <th></th>
         </tr>
@@ -88,19 +76,7 @@
                 @Html.DisplayFor(modelItem => item.ModelMotorcycle.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Engine.EngineId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fuel.FuelId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Electric.ElectricId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brake.BrakeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Transmission.TransmissionId)
+                @Html.DisplayFor(modelItem => item.Displacement.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MotorcycleId">Edit</a> |

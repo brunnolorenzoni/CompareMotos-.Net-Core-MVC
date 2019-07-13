@@ -22,7 +22,7 @@ namespace CompareMotos.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var compareMotosContext = _context.Motorcycle.Include(m => m.Brake).Include(m => m.Brand).Include(m => m.Electric).Include(m => m.Engine).Include(m => m.Fuel).Include(m => m.ModelMotorcycle).Include(m => m.Transmission).Include(m => m.TypeMotorcycle);
+            var compareMotosContext = _context.Motorcycle.Include(m => m.Brand).Include(m => m.Displacement).Include(m => m.ModelMotorcycle).Include(m => m.TypeMotorcycle);
             return View(await compareMotosContext.ToListAsync());
         }
 

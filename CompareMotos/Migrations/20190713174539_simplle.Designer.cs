@@ -3,14 +3,16 @@ using CompareMotos.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CompareMotos.Migrations
 {
     [DbContext(typeof(CompareMotosContext))]
-    partial class CompareMotosContextModelSnapshot : ModelSnapshot
+    [Migration("20190713174539_simplle")]
+    partial class simplle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -161,7 +161,7 @@ a {
 
     @media all and (min-width: 1024px) {
         .dashboard .section {
-            width: calc(100% / 3);
+            width: calc(100% / 5);
         }
     }
 

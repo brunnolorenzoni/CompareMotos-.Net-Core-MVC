@@ -14,7 +14,7 @@ namespace CompareMotos.Models
         public int BrandId { get; set; }
 
         [Required(ErrorMessage = "Adicione a marca da moto")]
-        [DisplayName("Modelo")]
+        [DisplayName("Marca da moto")]
         public string Name { get; set; }
 
     }

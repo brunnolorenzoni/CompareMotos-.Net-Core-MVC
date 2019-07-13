@@ -21,7 +21,7 @@ namespace CompareMotos.Controllers
         // GET: Motorcycles
         public async Task<IActionResult> Index()
         {
-            var compareMotosContext = _context.Motorcycle.Include(m => m.Brake).Include(m => m.Brand).Include(m => m.Electric).Include(m => m.Engine).Include(m => m.Fuel).Include(m => m.ModelMotorcycle).Include(m => m.Transmission).Include(m => m.TypeMotorcycle);
+            var compareMotosContext = _context.Motorcycle.Include(m => m.Brand).Include(m => m.Displacement).Include(m => m.ModelMotorcycle).Include(m => m.TypeMotorcycle);
             return View(await compareMotosContext.ToListAsync());
         }
 
@@ -34,13 +34,9 @@ namespace CompareMotos.Controllers
             }
 
             var motorcycle = await _context.Motorcycle
-                .Include(m => m.Brake)
                 .Include(m => m.Brand)
-                .Include(m => m.Electric)
-                .Include(m => m.Engine)
-                .Include(m => m.Fuel)
+                .Include(m => m.Displacement)
                 .Include(m => m.ModelMotorcycle)
-                .Include(m => m.Transmission)
                 .Include(m => m.TypeMotorcycle)
                 .FirstOrDefaultAsync(m => m.MotorcycleId == id);
             if (motorcycle == null)
@@ -54,13 +50,9 @@ namespace CompareMotos.Controllers
         // GET: Motorcycles/Create
         public IActionResult Create()
         {
-            ViewData["BrakeId"] = new SelectList(_context.Brake, "BrakeId", "BrakeId");
             ViewData["BrandId"] = new SelectList(_context.Brand, "BrandId", "Name");
-            ViewData["ElectricId"] = new SelectList(_context.Electric, "ElectricId", "ElectricId");
-            ViewData["EngineId"] = new SelectList(_context.Engine, "EngineId", "EngineId");
-            ViewData["FuelId"] = new SelectList(_context.Fuel, "FuelId", "FuelId");
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "Name");
             ViewData["ModelMotorcycleId"] = new SelectList(_context.ModelMotorcycle, "ModelMotorcycleId", "Name");
-            ViewData["TransmissionId"] = new SelectList(_context.Transmission, "TransmissionId", "TransmissionId");
             ViewData["TypeMotorcycleId"] = new SelectList(_context.TypeMotorcycle, "TypeMotorcycleId", "Name");
             return View();
         }
@@ -70,7 +62,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MotorcycleId,Year,Price,Length,Width,Height,Weight,TypeMotorcycleId,BrandId,ModelMotorcycleId,EngineId,FuelId,ElectricId,BrakeId,TransmissionId")] Motorcycle motorcycle)
+        public async Task<IActionResult> Create([Bind("MotorcycleId,Year,Price,Length,Width,Height,Weight,TypeMotorcycleId,BrandId,ModelMotorcycleId,DisplacementId")] Motorcycle motorcycle)
         {
             if (ModelState.IsValid)
             {
@@ -78,13 +70,9 @@ namespace CompareMotos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BrakeId"] = new SelectList(_context.Brake, "BrakeId", "BrakeId", motorcycle.BrakeId);
             ViewData["BrandId"] = new SelectList(_context.Brand, "BrandId", "Name", motorcycle.BrandId);
-            ViewData["ElectricId"] = new SelectList(_context.Electric, "ElectricId", "ElectricId", motorcycle.ElectricId);
-            ViewData["EngineId"] = new SelectList(_context.Engine, "EngineId", "EngineId", motorcycle.EngineId);
-            ViewData["FuelId"] = new SelectList(_context.Fuel, "FuelId", "FuelId", motorcycle.FuelId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "Name", motorcycle.DisplacementId);
             ViewData["ModelMotorcycleId"] = new SelectList(_context.ModelMotorcycle, "ModelMotorcycleId", "Name", motorcycle.ModelMotorcycleId);
-            ViewData["TransmissionId"] = new SelectList(_context.Transmission, "TransmissionId", "TransmissionId", motorcycle.TransmissionId);
             ViewData["TypeMotorcycleId"] = new SelectList(_context.TypeMotorcycle, "TypeMotorcycleId", "Name", motorcycle.TypeMotorcycleId);
             return View(motorcycle);
         }
@@ -102,13 +90,9 @@ namespace CompareMotos.Controllers
             {
                 return NotFound();
             }
-            ViewData["BrakeId"] = new SelectList(_context.Brake, "BrakeId", "BrakeId", motorcycle.BrakeId);
             ViewData["BrandId"] = new SelectList(_context.Brand, "BrandId", "Name", motorcycle.BrandId);
-            ViewData["ElectricId"] = new SelectList(_context.Electric, "ElectricId", "ElectricId", motorcycle.ElectricId);
-            ViewData["EngineId"] = new SelectList(_context.Engine, "EngineId", "EngineId", motorcycle.EngineId);
-            ViewData["FuelId"] = new SelectList(_context.Fuel, "FuelId", "FuelId", motorcycle.FuelId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "Name", motorcycle.DisplacementId);
             ViewData["ModelMotorcycleId"] = new SelectList(_context.ModelMotorcycle, "ModelMotorcycleId", "Name", motorcycle.ModelMotorcycleId);
-            ViewData["TransmissionId"] = new SelectList(_context.Transmission, "TransmissionId", "TransmissionId", motorcycle.TransmissionId);
             ViewData["TypeMotorcycleId"] = new SelectList(_context.TypeMotorcycle, "TypeMotorcycleId", "Name", motorcycle.TypeMotorcycleId);
             return View(motorcycle);
         }
@@ -118,7 +102,7 @@ namespace CompareMotos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MotorcycleId,Year,Price,Length,Width,Height,Weight,TypeMotorcycleId,BrandId,ModelMotorcycleId,EngineId,FuelId,ElectricId,BrakeId,TransmissionId")] Motorcycle motorcycle)
+        public async Task<IActionResult> Edit(int id, [Bind("MotorcycleId,Year,Price,Length,Width,Height,Weight,TypeMotorcycleId,BrandId,ModelMotorcycleId,DisplacementId")] Motorcycle motorcycle)
         {
             if (id != motorcycle.MotorcycleId)
             {
@@ -145,13 +129,9 @@ namespace CompareMotos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BrakeId"] = new SelectList(_context.Brake, "BrakeId", "BrakeId", motorcycle.BrakeId);
             ViewData["BrandId"] = new SelectList(_context.Brand, "BrandId", "Name", motorcycle.BrandId);
-            ViewData["ElectricId"] = new SelectList(_context.Electric, "ElectricId", "ElectricId", motorcycle.ElectricId);
-            ViewData["EngineId"] = new SelectList(_context.Engine, "EngineId", "EngineId", motorcycle.EngineId);
-            ViewData["FuelId"] = new SelectList(_context.Fuel, "FuelId", "FuelId", motorcycle.FuelId);
+            ViewData["DisplacementId"] = new SelectList(_context.Displacement, "DisplacementId", "Name", motorcycle.DisplacementId);
             ViewData["ModelMotorcycleId"] = new SelectList(_context.ModelMotorcycle, "ModelMotorcycleId", "Name", motorcycle.ModelMotorcycleId);
-            ViewData["TransmissionId"] = new SelectList(_context.Transmission, "TransmissionId", "TransmissionId", motorcycle.TransmissionId);
             ViewData["TypeMotorcycleId"] = new SelectList(_context.TypeMotorcycle, "TypeMotorcycleId", "Name", motorcycle.TypeMotorcycleId);
             return View(motorcycle);
         }
@@ -165,13 +145,9 @@ namespace CompareMotos.Controllers
             }
 
             var motorcycle = await _context.Motorcycle
-                .Include(m => m.Brake)
                 .Include(m => m.Brand)
-                .Include(m => m.Electric)
-                .Include(m => m.Engine)
-                .Include(m => m.Fuel)
+                .Include(m => m.Displacement)
                 .Include(m => m.ModelMotorcycle)
-                .Include(m => m.Transmission)
                 .Include(m => m.TypeMotorcycle)
                 .FirstOrDefaultAsync(m => m.MotorcycleId == id);
             if (motorcycle == null)
