@@ -37,11 +37,14 @@ namespace CompareMotos.Controllers
         [HttpGet("compare")]
         public async Task<IActionResult> Compare(string nameA, string nameB )
         {
+
             try
             {
                 string term = HttpContext.Request.Query["term"].ToString();
-                var names = _context.Motorcycle.Where(p => p.ModelMotorcycle.Name.Contains(term)).Select(p => p.ModelMotorcycle.Name).ToList();
-                return Ok(names);
+
+                var motorcycles = _context.Motorcycle.Where(p => p.ModelMotorcycle.Name.Contains(nameA)).ToList();
+
+                return Ok(motorcycles);
             }
             catch
             {

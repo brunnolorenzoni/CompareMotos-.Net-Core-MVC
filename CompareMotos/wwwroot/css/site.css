@@ -21,31 +21,31 @@ a {
     padding: 16px;
 }
 
-    .main-wrapper .title .logo {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-        opacity: 0.3;
-        margin: auto
+.main-wrapper .title .logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    opacity: 0.3;
+    margin: auto
 
-    }
+}
 
-        .main-wrapper .title {
-        position: relative;
-        font-size: 30px;
-        text-align: center;
-        padding-top: 60px;
-        font-family: 'Comfortaa', cursive;
-    }
+    .main-wrapper .title {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 60px;
+    font-family: 'Comfortaa', cursive;
+}
 
-    .main-wrapper .title .title-float {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Comfortaa', cursive;
-    }
+.main-wrapper .title .title-float {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Comfortaa', cursive;
+}
 
 
 .form-compare {
@@ -56,26 +56,71 @@ a {
     margin-top: 30px;
 }
 
-    .form-compare .divisor-form{
-        text-align: center;
-    }
+.form-compare .divisor-form{
+    text-align: center;
+}
 
-    .form-compare .divisor-form i{
-        text-align: center;
-        color: #000;
-        font-size: 20px;
-    }
+.form-compare .divisor-form i{
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+}
 
-    .form-compare .container {
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        width: 100%;
-    }
+.form-compare .container {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.comparation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.comparation-container .card {
+    display: block;
+    width: calc((100%/ 2) - 10px);
+}
+
+.comparation-container .card .title{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.comparation-container .card .info:nth-child(even) {
+    background: #dcdcdc;
+}
+
+.comparation-container .card .info {
+    padding: 10px 5px;
+    float: left;
+    display: block;
+    width: 100%
+}
+
+.comparation-container .card .info .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    float: left;
+}
+
+.comparation-container .card .info .content {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    float: right;
+}
 
 @media all and (min-width: 768px) {
-
-
     .main-wrapper .title {
         font-size: 40px;
     }
@@ -106,29 +151,28 @@ a {
     }
 
     .form-compare .container.full-width {
-         width: 100%;
+        width: 100%;
     }
-
 }
 
-    .form-compare .container .input {
-        padding: 5px;
-        width: 90%;
-        max-width: 500px;
-        height: 35px;
-        border: 1px solid #DADCE0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+.form-compare .container .input {
+    padding: 5px;
+    width: 90%;
+    max-width: 500px;
+    height: 35px;
+    border: 1px solid #DADCE0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
         
-    }
+}
 
-    .form-compare .container .btn {
-        padding: 5px 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
-        border-radius: 3px;
-        border: 1px solid #DADCE0;
-        font-weight: 700;
-        cursor: pointer;
-    }
+.form-compare .container .btn {
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+    border-radius: 3px;
+    border: 1px solid #DADCE0;
+    font-weight: 700;
+    cursor: pointer;
+}
 
 
 
