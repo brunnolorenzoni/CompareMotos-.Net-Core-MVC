@@ -101,7 +101,6 @@ a {
 
 .comparation-container .card .info {
     padding: 10px 5px;
-    float: left;
     display: block;
     width: 100%
 }
@@ -110,14 +109,13 @@ a {
     font-size: 14px;
     font-weight: 700;
     color: #000;
-    float: left;
+    padding: 0;
 }
 
 .comparation-container .card .info .content {
     font-size: 14px;
     font-weight: 400;
     color: #000;
-    float: right;
 }
 
 @media all and (min-width: 768px) {
