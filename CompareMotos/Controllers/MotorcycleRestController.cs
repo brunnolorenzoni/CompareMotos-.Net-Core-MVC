@@ -1,5 +1,6 @@
 ﻿using CompareMotos.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,11 +41,33 @@ namespace CompareMotos.Controllers
 
             try
             {
-                string term = HttpContext.Request.Query["term"].ToString();
+                string _nameA = HttpContext.Request.Query["nameA"].ToString();
+                string _nameB = HttpContext.Request.Query["nameB"].ToString();
 
-                var motorcycles = _context.Motorcycle.Where(p => p.ModelMotorcycle.Name.Contains(nameA)).ToList();
+                var return_list = new List<object>();
 
-                return Ok(motorcycles);
+                var motorcycleA =
+                    _context.Motorcycle
+                    .Where(p => p.ModelMotorcycle.Name.Contains(_nameA))
+                    .Include(p => p.ModelMotorcycle)
+                    .Include(p => p.Brand)
+                    .Include(p => p.Displacement)
+                    .Include(p => p.TypeMotorcycle);
+
+                return_list.Add(motorcycleA);
+
+                var motorcycleB =
+                    _context.Motorcycle
+                    .Where(p => p.ModelMotorcycle.Name.Contains(_nameB))
+                    .Include(p => p.ModelMotorcycle)
+                    .Include(p => p.Brand)
+                    .Include(p => p.Displacement)
+                    .Include(p => p.TypeMotorcycle);
+
+                return_list.Add(motorcycleB);
+
+
+                return Ok(return_list);
             }
             catch
             {

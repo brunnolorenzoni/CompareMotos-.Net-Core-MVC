@@ -76,7 +76,7 @@ using CompareMotos.Models;
                     ");
             EndContext();
             BeginContext(298, 81, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b4d97de2ee2406ea9052d48579e607e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb923b3271784b5785d5b53f30f13250", async() => {
                 BeginContext(361, 14, true);
                 WriteLiteral("Cadastrar moto");
                 EndContext();
@@ -102,7 +102,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Tipo de moto</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(623, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0ea76e4c96843209fd8d9326d297f17", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13669f882871466b9a306194a41ce53a", async() => {
                 BeginContext(690, 26, true);
                 WriteLiteral("Cadastrar os tipos de moto");
                 EndContext();
@@ -128,7 +128,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Fabricantes</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(963, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b729e69299d491399dc34557874e10a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cda041e098e145a289bfee1f499b0020", async() => {
                 BeginContext(1021, 21, true);
                 WriteLiteral("Cadastrar fabricantes");
                 EndContext();
@@ -154,7 +154,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Modelos de motos</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1294, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ccf20fdd7194d4da377844d911ab6dd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67ba07d2440a40cba558a2c0258a17d0", async() => {
                 BeginContext(1362, 24, true);
                 WriteLiteral("Cadastrar modelo de moto");
                 EndContext();
@@ -180,7 +180,7 @@ using CompareMotos.Models;
             WriteLiteral("\r\n                </li>\r\n            </ul>\r\n        </section>\r\n\r\n        <section class=\"section\">\r\n            <h2 class=\"sub-title\">Cilindradas</h2>\r\n            <ul class=\"nav-list\">\r\n                <li class=\"item\">\r\n                    ");
             EndContext();
             BeginContext(1633, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f5f175423324d9e856a102bf4edd7d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a1a011b00264d9f8d9136c0eee3583b", async() => {
                 BeginContext(1698, 20, true);
                 WriteLiteral("Cadastrar cilindrada");
                 EndContext();

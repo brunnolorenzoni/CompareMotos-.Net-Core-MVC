@@ -17,16 +17,28 @@ var buildCompare = function (data)
             "height": 10000,
             "weight": 10000,
             "typeMotorcycleId": 1,
-            "typeMotorcycle": null,
+            "typeMotorcycle": {
+                "typeMotorcycleId": 1,
+                "name": "Naked"
+            },
             "brandId": 1,
-            "brand": null,
+            "brand": {
+                "brandId": 1,
+                "name": "Honda"
+            },
             "modelMotorcycleId": 1,
-            "modelMotorcycle": null,
+            "modelMotorcycle": {
+                "modelMotorcycleId": 1,
+                "name": "CB Twister 250F"
+            },
             "displacementId": 1,
-            "displacement": null
+            "displacement": {
+                "displacementId": 1,
+                "name": 250
+            }
         },
         {
-            "motorcycleId": 1,
+            "motorcycleId": 2,
             "year": 2019,
             "price": 15000,
             "length": 10000,
@@ -34,14 +46,26 @@ var buildCompare = function (data)
             "height": 10000,
             "weight": 10000,
             "typeMotorcycleId": 1,
-            "typeMotorcycle": null,
-            "brandId": 1,
-            "brand": null,
-            "modelMotorcycleId": 1,
-            "modelMotorcycle": null,
+            "typeMotorcycle": {
+                "typeMotorcycleId": 1,
+                "name": "Naked"
+            },
+            "brandId": 2,
+            "brand": {
+                "brandId": 2,
+                "name": "Yamaha"
+            },
+            "modelMotorcycleId": 2,
+            "modelMotorcycle": {
+                "modelMotorcycleId": 2,
+                "name": "Fazer "
+            },
             "displacementId": 1,
-            "displacement": null
-        },
+            "displacement": {
+                "displacementId": 1,
+                "name": 250
+            }
+        }
 
     ]
 
@@ -56,15 +80,15 @@ var buildCompare = function (data)
         var html =
             '<div class="card">' +
 
-            '<h2 class="title">' + data[i].modelMotorcycle + '</h2>' +
+            '<h2 class="title">' + data[i].modelMotorcycle.name + '</h2>' +
 
             '<p class="info brand">' +
                 '<span class="label">Marca: </span> ' +
-                '<span class="content">' + data[i].brand + '</span>' +
+                '<span class="content">' + data[i].brand.name + '</span>' +
             '</p>' +
             '<p class="info type">' +
                 '<span class="label">Tipo: </span> ' +
-                '<span class="content">' + data[i].typeMotorcycle + '</span>' +
+                '<span class="content">' + data[i].typeMotorcycle.name + '</span>' +
             '</p>' +
             '<p class="info year">' +
                 '<span class="label">Ano: </span>' +
@@ -118,6 +142,7 @@ var compararMotos = function (e) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         success: function (data) {
+            console.log(data)
             buildCompare(data)
         },
         error: function (response) {
@@ -129,7 +154,7 @@ var compararMotos = function (e) {
     
 var bind = function () {
     $('#compare1').autocomplete({
-        source: '/api/motorcycle/search'
+        source: '/api/motorcycle/search',
     });
 
     $('#compare2').autocomplete({
@@ -143,7 +168,7 @@ var init = function () {
 
     bind();
 
-    buildCompare();
+    //buildCompare();
 
 }
 
