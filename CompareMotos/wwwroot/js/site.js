@@ -6,7 +6,7 @@
 
 var buildCompare = function (data)
 {
-
+/*
     var data = [
         {
             "motorcycleId": 1,
@@ -68,6 +68,11 @@ var buildCompare = function (data)
         }
 
     ]
+
+*/
+
+    var data = [data[0]['0'], data[1]['0']];
+
 
     console.log(data)
 
@@ -142,7 +147,6 @@ var compararMotos = function (e) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         success: function (data) {
-            console.log(data)
             buildCompare(data)
         },
         error: function (response) {
